@@ -46,3 +46,25 @@ Pamiętaj, że masz możliwość samodzielnego zarządzania „cookies”. Umoż
 •	blokowania lub usuwania cookies.
 Efektem zmiany ustawień w przeglądarce, w zależności od wybranej opcji, może być utrata możliwości korzystania z niektórych serwisów i usług lub z niektórych funkcji w nich dostępnych.
 
+Ad 5
+Co to jest protokół http?                                                                                                                                            Http (Hypertext Transfer Protocol) jest używany do przesyłania danych do przeglądarki internetowej z serwera. Umożliwia komunikację pomiędzy systemami i surfowanie po sieci. Dawniej był stosowany na niemal wszystkich stronach www, obecnie się od niego odchodzi, głównie ze względu na to, że informacje przesyłane za pomocą tego protokołu nie są szyfrowane. Protokół http nie pamięta poprzedniej sesji, skupia się na dostarczeniu informacji, nie na sposobie dostarczenia i tym, by był on bezpieczny.
+
+Co to jest protokół https?
+Protokół https (Hypertext Transfer Protocol Secure) jest w zasadzie rozszerzonym o zabezpieczenia protokołem http. Używa certyfikatu SSL do przenoszenia danych w celu zabezpieczenia np. transakcji internetowych. Uniemożliwia nieautoryzowanym użytkownikom na dostęp do danych. Informacje przesyłane przez https są szyfrowane.
+Jaka jest różnica między http a https?
+Główną różnicą między http a https jest certyfikat SSL. Https to protokół http z dodatkowymi zabezpieczeniami. Te zabezpieczenia są niezwykle ważne w przypadku witryn z poufnymi danymi użytkowników. Certyfikat SSL szyfruje informacje, przekładając je na kod, który, nawet jeśli zostanie przechwycony, nie może być odczytany przez osoby nieuprawnione. Dodatkową warstwę zabezpieczeń zapewnia certyfikat TLS, który powoduje integralność danych oraz uwierzytelnianie. TLS również jest obsługiwany przez protokół https. Dzięki tym certyfikatom połączenia są zabezpieczone.
+Jaki wpływ na SEO mają http i https?
+Posiadanie bezpiecznej witryny ma zaskakująco pozytywny wpływ na SEO. Oprócz tego, że już w 2014 roku Google, w celu zachęcenia właścicieli stron www do korzystania z bezpieczniejszej opcji, ogłosiło, że będzie faworyzowało strony z protokołem https, taka zmiana ma jeszcze inny, pozytywny wpływ na pozycjonowanie. Na poprawienie pozycji witryny może wpłynąć fakt, że użytkownicy wiedzą, że jest ona bezpieczna, przez co chętniej z niej korzystają niż z konkurencyjnych stron bez certyfikatu SSL.
+Według badania GlobalSign 84% konsumentów zrezygnowałoby z zakupu, gdyby dane zostały przesłane przez niezabezpieczone połączenie, a 82% osób w ogóle nie przegląda niezabezpieczonej witryny. Użytkownicy bardziej ufają bezpiecznym stronom, co wpływa pozytywnie na konwersje oraz ruch na stronie. Ponadto dzięki zachowywaniu danych witryny odsyłającej zwiększa się skuteczność Google Analytics.
+Jednak należy również zwrócić uwagę, że aby przejście na https nie było ryzykowne dla SEO, trzeba pamiętać o kilku wskazówkach podczas przełączania się z protokołu http. Przede wszystkim:
+•	poinformuj Google o przejściu z http na https, żeby szybciej osiągnąć obiecane przez Google wyższe rankingi,
+•	zdecyduj, jaki certyfikat potrzebujesz i dla ilu domen,
+•	używaj względnych adresów URL,
+•	pamiętaj, aby nie blokować witryny HTTPS za pomocą plików robots.txt,
+•	upewnij się, że zezwalasz wyszukiwarkom na indeksowanie,
+•	najlepiej wykorzystaj narzędzia Google dla webmasterów bądź indomonitorowania przejścia z http na https, by szybko reagować na ewentualne problemy.
+Dlaczego warto przejść na protokół https?
+Szyfrowanie jest niezwykle ważne w czasach tak wielu ataków hakerskich oraz przeniesienia niemal wszystkich wrażliwych danych do internetu. Za pomocą stron internetowych konsumenci monitorują swoje dochody, zarządzają życiowymi oszczędnościami, wykonują kosztowne operacje, przesyłają prywatne zdjęcia, maile, czy komunikują się zarówno z bliskimi, jak i partnerami biznesowymi. Ingerencja osób trzecich w przypadku wielu z tych operacji jest niebywałym zagrożeniem.
+Protokół https pozwala na szyfrowanie całej komunikacji, łącznie z adresami URL, historią przeglądania oraz numerami kart kredytowych. I większość klientów ma tego świadomość, a jeśli nie, to pomaga im w tym Google. Chrome ostrzega użytkowników przed nieszyfrowanymi stronami, wyświetlając im niepokojący komunikat o niebezpieczeństwie danej strony. Co skutecznie odstrasza konsumentów. Bezpieczeństwo jest dużą zaletą i prowadzi do kolejnych korzyści dla strony. Witryny https osiągają lepsze wyniki w Google. Ruch na www i konwersja są lepsze właśnie dzięki zaufaniu klientów.
+Http czy https – podsumowanie
+Https to obecnie standardowy protokół. Jest coraz mniej stron korzystających z http. Bezpieczeństwo klientów jest kluczową sprawą. Bezpieczeństwo nie tylko danych takich jak numery kart, piny czy dane osobowe, ale i możliwość swobodnego surfowania po stronie, które daje certyfikat SSL. Przejście na protokół https jest jednym z czynników pozytywnie wpływających na SEO.
