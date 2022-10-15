@@ -68,3 +68,28 @@ Szyfrowanie jest niezwykle ważne w czasach tak wielu ataków hakerskich oraz pr
 Protokół https pozwala na szyfrowanie całej komunikacji, łącznie z adresami URL, historią przeglądania oraz numerami kart kredytowych. I większość klientów ma tego świadomość, a jeśli nie, to pomaga im w tym Google. Chrome ostrzega użytkowników przed nieszyfrowanymi stronami, wyświetlając im niepokojący komunikat o niebezpieczeństwie danej strony. Co skutecznie odstrasza konsumentów. Bezpieczeństwo jest dużą zaletą i prowadzi do kolejnych korzyści dla strony. Witryny https osiągają lepsze wyniki w Google. Ruch na www i konwersja są lepsze właśnie dzięki zaufaniu klientów.
 Http czy https – podsumowanie
 Https to obecnie standardowy protokół. Jest coraz mniej stron korzystających z http. Bezpieczeństwo klientów jest kluczową sprawą. Bezpieczeństwo nie tylko danych takich jak numery kart, piny czy dane osobowe, ale i możliwość swobodnego surfowania po stronie, które daje certyfikat SSL. Przejście na protokół https jest jednym z czynników pozytywnie wpływających na SEO.
+
+
+Co to są testy mutacyjne?
+Testy mutacyjne pozwalają na testowanie naszych testów. Dokonują tego poprzez modyfikowanie (mutowanie) naszego kodu produkcyjnego. Tak zmieniony kod – czyli nasz kod produkcyjny z jedną wprowadzoną przez testy mutacyjne zmianą – nazywa się mutantem. Jest on następnie kompilowany i uruchamiane są wobec niego testy – te, które już mamy. Jeśli żaden z testów się nie wysypie, oznacza to, że nasze testy nie wyłapują zmian w kodzie produkcyjnym. Jest to zła sytuacja, w której mówimy, że mutant przeżył (survived). Jeśli natomiast co najmniej jeden test się wywali, mówimy, że mutant został zabity (killed). Jest to pożądane zachowanie, ponieważ oznacza, że zmiany w kodzie produkcyjnym są wyłapywane przez nasz zestaw testów.
+Co nam dają testy mutacyjne?
+•	większą pewność siebie przy refactoringu. Zmieniając kod produkcyjny pokryty testami mutacyjnymi, czuję się dużo bezpieczniej
+•	„darmowe” generowanie przypadków testowych. Na pewno często pisząc testy, spędzasz czas na wymyślaniu, co może pójść nie tak. Testy mutacyjne pozwalają wygenerować takie przypadki automatycznie i bez wysiłku. W efekcie dopisujesz do swojego kodu nowe testy pokrywające znalezione przez mutanty przypadki
+•	wyłapywanie większej liczby błędów w kodzie produkcyjnym. Czasami wygenerowany mutant pokazuje, że jakiś warunek czy scenariusz w naszym kodzie jest bezsensowny. Skutkiem tego może być uproszczenie kodu produkcyjnego lub dopracowanie warunków brzegowych.
+Testy mutacyjne
+Czym są ? To technika polegająca na wprowadzaniu małych i losowych zmian w kodzie naszej aplikacji. Zmiany te powinny zostać wykryte przez nasze testy jednostkowe. Jeżeli, któraś ze zmian nie została wykryta oznacza to, że nasze testy mogą nie być tak dobre jak nam się wydawało.
+Jakie zmiany?
+Poniżej lista z przykładowymi zmianami, które mogą zostać wprowadzone w naszym kodzie.
+•	Zmiana granicy w warunkach, np. > zostanie zmienione na >=, >= na >, itd.,
+•	Negacja warunków, np. == zostanie zmienione na !=, <= na >, itd.,
+•	Usunięcie warunków i zastąpienie ich stałą wartością, np. a > b zostanie zmienione na true,
+•	Zmiana operacji matematycznych, np. dodawanie zostanie zamienione na odejmowanie, a mnożenie na dzielenie,
+•	Zmiana wartości zmiennych na wartości defaultowe lub stałe, np. int zostanie ustawiony na lub inną losową wartość,
+•	Zwrócenie null zamiast obiektu,
+•	Pominięcie wywołania metody typu void,
+Właśnie zapoznaliśmy się z przykładowymi modyfikacjami, które mogą zostać wprowadzone do aplikacji podczas testów mutacyjnych. Testy jednostkowe powinny być napisane w taki sposób, aby zmiany te spowodowały to, że nasze testy nie przejdą. Testy te mogą nam pomóc w sprawdzeniu jak dobre są nasze testy jednostkowe. 
+Testowanie mutacyjne (in. mutation testing / mutation analysis / program mutation) – technika wykorzystywana do projektowania testów oprogramowania oraz oceny jakości testów już istniejących (np. testów jednostkowych). Testowanie mutacyjne polega na wielokrotnym wprowadzaniu niewielkich zmian do programu. Po wprowadzeniu zmian program uruchamiany jest ponownie, a zadaniem testu jest wykrycie wprowadzonych modyfikacji oraz usunięcie ich. Głównym celem stosowania testowania mutacyjnego jest pomoc testerowi w budowaniu skutecznych testów lub zlokalizowanie słabych punktów testów już wykorzystywanych. Testy mutacyjne zalicza się do grupy testów strukturalnych (ang. white-box testing).
+Bardziej ogólna definicja testowania mutacyjnego mówi, że testowanie to polega na stosowaniu dobrze zdefiniowanych reguł w strukturach składniowych programu w celu dokonywania systematycznych zmian w artefaktach oprogramowania.
+Główne cele stosowania testowania mutacyjnego
+•	identyfikowanie słabo przetestowanych fragmentów kodu (tych, dla których modyfikacje nie zostały odnalezione) 
+•	identyfikowanie słabych testów (tych, które mają małą wykrywalność mutacji) 
