@@ -96,11 +96,16 @@ Główne cele stosowania testowania mutacyjnego
 
 
 Składniki przypadku testowego:
-* Nazwa /opis, tytuł/ - opis tego co dany test będzie sprawdzał. Staramy sie aby był krótki i zwięzły. Czasem w projekcie stosuje się umowne konwencje nazewnictwa przypadków testowych, aby uniknąć duplikatów i w możliwie szybki sposób odnaleźć konkretny przpadek testowy. Np. Logowanie do alikacji prawidłowymi danymi - Dowolny użytkownik.
+* Nazwa /opis, tytuł/ - opis tego co dany test będzie sprawdzał. Staramy się aby był krótki i zwięzły. Czasem w projekcie stosuje się umowne konwencje nazewnictwa przypadków testowych, aby uniknąć duplikatów i w możliwie szybki sposób odnaleźć konkretny przpadek testowy. Np. Logowanie do alikacji prawidłowymi danymi - Dowolny użytkownik.
 * Cel testu - w tym miejscu mozna wpisać (czasem wręcz dosłonie przepisać) fragment wymagania, które będzie przetestowane, np. "Test sprawdza czy dowolny użytkownik może zalogowac się do systemu".
 * Warunki wstępne - warunki, które powinny zostać spełnione, zanim przejdziemy do wykonywania testu. To jest BARDZO WAŻNE, ponieważ jeśli dobrze opiszemy warunki wstępne, jest większe prawdopodobieństwo, że test zostanie prawidłowo przeprowadzony.
 * Wymagania - numer wymagania, które zostanie przetestowane. W przypadku historyjek uzytkownika, podajemy nr historyjki. Wymagania będą pokrywane przypadkiem. 
-Typ testu/Rodzaj - pozytyeny/negatywny. W TestLinku występuje pole "Rodzaj testu" 
+* Typ testu/Rodzaj - pozytywny/negatywny. W TestLinku występuje pole "Rodzaj testu", które wymaga określenia, czy stworzony test jest testem manulanym czy automatycznym.
+* Priorytet - niski/wysoki.
+* Numer kroku - W narzędziach używanych do tworzenia testów, numery są nadawane kolejno przez system, można je też przenumerować.
+* Opis kroku - szczegółowa komenda do wykonania w systemie.
+* Oczekiwany rezultat - Efekt wykonania kroku z opisu.
+* Aktualny rezultat - kolumna dodawana w przypadku przeprowadzania testów formalnie. Różnie nazywana w różnych narzędzaich. 
 
 Jak będzie wyglądało poprawne zgłoszenie defektu?                                                                                                                  Liczne narzędzia ułatwiają ten proces poprzez domyślne definiowanie pól, jednak dobrze jest nauczyć się i zapamiętać najważniejsze informacje, które powinny znaleźć się w każdym zgłoszeniu defektu. A są to:                                            
 
