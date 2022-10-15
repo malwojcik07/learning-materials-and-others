@@ -93,3 +93,29 @@ Bardziej ogólna definicja testowania mutacyjnego mówi, że testowanie to poleg
 Główne cele stosowania testowania mutacyjnego
 •	identyfikowanie słabo przetestowanych fragmentów kodu (tych, dla których modyfikacje nie zostały odnalezione) 
 •	identyfikowanie słabych testów (tych, które mają małą wykrywalność mutacji) 
+
+
+Składniki przypadku testowego:
+* Nazwa /opis, tytuł/ - opis tego co dany test będzie sprawdzał. Staramy sie aby był krótki i zwięzły. Czasem w projekcie stosuje się umowne konwencje nazewnictwa przypadków testowych, aby uniknąć duplikatów i w możliwie szybki sposób odnaleźć konkretny przpadek testowy. Np. Logowanie do alikacji prawidłowymi danymi - Dowolny użytkownik.
+* Cel testu - w tym miejscu mozna wpisać (czasem wręcz dosłonie przepisać) fragment wymagania, które będzie przetestowane, np. "Test sprawdza czy dowolny użytkownik może zalogowac się do systemu".
+* Warunki wstępne - warunki, które powinny zostać spełnione, zanim przejdziemy do wykonywania testu. To jest BARDZO WAŻNE, ponieważ jeśli dobrze opiszemy warunki wstępne, jest większe prawdopodobieństwo, że test zostanie prawidłowo przeprowadzony.
+* Wymagania - numer wymagania, które zostanie przetestowane. W przypadku historyjek uzytkownika, podajemy nr historyjki. Wymagania będą pokrywane przypadkiem. 
+Typ testu/Rodzaj - pozytyeny/negatywny. W TestLinku występuje pole "Rodzaj testu" 
+
+Jak będzie wyglądało poprawne zgłoszenie defektu?                                                                                                                  Liczne narzędzia ułatwiają ten proces poprzez domyślne definiowanie pól, jednak dobrze jest nauczyć się i zapamiętać najważniejsze informacje, które powinny znaleźć się w każdym zgłoszeniu defektu. A są to:                                            
+
+•	Identyfikator zgłoszenia
+•	Krótki i rzeczowy tytuł zgłaszanego defektu
+•	Data i godzina wystąpienia defektu
+•	Zgłaszający zespół
+•	Autor zgłoszenia
+•	Przypisany do
+•	Identyfikacja elementu testowego i środowiska
+•	Faza cyklu życia oprogramowania, w której zaobserwowano defekt. Z reguły (Dev, Test/QA, Prod)
+•	Opis z krokami do reprodukcji defektu oraz warunkami wstępnymi (danymi testowymi)
+•	Oczekiwane i rzeczywiste rezultaty
+•	Ważność
+•	Priorytet
+•	Status w narzędziu do zarządzania testowaniem, np. otwarty, odroczony, powielony, oczekujący na poprawkę, oczekujący na testowanie potwierdzające, ponownie otwarty, zamknięty
+•	Załączniki.
+
