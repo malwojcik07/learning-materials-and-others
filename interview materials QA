@@ -108,7 +108,6 @@ Składniki przypadku testowego:
 * Aktualny rezultat - kolumna dodawana w przypadku przeprowadzania testów formalnie. Różnie nazywana w różnych narzędzaich. 
 
 Jak będzie wyglądało poprawne zgłoszenie defektu?                                                                                                                  Liczne narzędzia ułatwiają ten proces poprzez domyślne definiowanie pól, jednak dobrze jest nauczyć się i zapamiętać najważniejsze informacje, które powinny znaleźć się w każdym zgłoszeniu defektu. A są to:                                            
-
 •	Identyfikator zgłoszenia
 •	Krótki i rzeczowy tytuł zgłaszanego defektu
 •	Data i godzina wystąpienia defektu
@@ -124,3 +123,48 @@ Jak będzie wyglądało poprawne zgłoszenie defektu?                           
 •	Status w narzędziu do zarządzania testowaniem, np. otwarty, odroczony, powielony, oczekujący na poprawkę, oczekujący na testowanie potwierdzające, ponownie otwarty, zamknięty
 •	Załączniki.
 
+
+Czym są testy regresyjne i czym różnią się od retestów?
+Retesty polegają na uruchomieniu przypadków testowych, które podczas ostatniego uruchomienia wykryły błędy, w celu sprawdzenia, czy poprawka rozwiązuje problemy.
+Testy regresji to ponowne przetestowanie programu po dokonaniu w nim modyfikacji, w celu sprawdzenia, czy w wyniku zmian nie powstały nowe defekty lub nie ujawniły się istniejące wcześniej.
+
+
+Omów cykl życia defektu
+Cykl życia defektu składa się z etapów, w trakcie których zmieniany jest status zgłoszenia. Najprostsza ścieżka to: 
+Zgłoszenie defektu przez testera 
+Przypisanie do niego programisty przez lidera zespołu/managera
+Naprawienie defektu przez programistę
+Weryfikacja i zamknięcie defektu przez testera
+Niestety nie zawsze tak to wygląda i czasem defekt wymaga dodatkowych poprawek i wielokrotnie wraca do programisty. Bywają też sytuacje, gdy zgłoszony defekt nie był należycie opisany i programista potrafił go zreprodukować.
+Defekty są zwykle zgłaszane w dedykowanym narzędziu (tzw. bugtracker) i najczęściej nadaje się im poniższe statusy:
+Dodanie znalezionego defektu – defekt otrzymuje status NOWY
+Przypisane go do programisty zmienia status na PRZYPISANY lub OTWARTY
+Gdy defekt jest naprawiany, jego status powinien być ustawiony na W TOKU
+Gdy poprawka wymaga przeglądu kodu (code review), programista zmienia status na W REVIEW
+Po naprawie lub code review, defekt oczekuje na weryfikację – DO WERYFIKACJI
+Po weryfikacji i potwierdzeniu, że defekt został naprawiony, zmieniamy status na ZAMKNIĘTY.
+
+Czym jest piramida testów?
+Piramida testów to przedstawienie w sposób graficzny hierarchii ilości wykonywanych testów. Pomaga ona określić priorytety w projekcie.
+Na samym dole znajdują się testy jednostkowe (unit testy). Stanowią one największą część testów w projekcie. Są one najtańsze i najszybsze ponieważ nie testują całej aplikacji/systemu ani nawet jej komponentów, lecz weryfikują, czy jednostka kodu (np. metoda, klasa, serwis) działa zgodnie z oczekiwaniami. Nie wymagają więc przygotowania środowisk testowych. 
+Po środku znajdują się testy integracyjne. Nie są one uruchamiane w kompletnej izolacji jak w przypadku testów jednostkowych, tym razem interesuje nas integracja z innymi komponentami. Komponentami mogą być: zewnętrzny serwis, baza danych, itd.
+Testy funkcjonalne (end-to-end) powinny stanowić najmniejszą ilość testów w projekcie. Testują one całą funkcjonalność od początku do końca. Symulują zachowanie użytkowników końcowych. Najczęściej testują też warstwę graficzną (jeśli występuje). Często realizowane są przy użyciu biblioteki Selenium lub innych pokrewnych.
+
+
+Różnica między testami czarnoskrzynkowymi i białoskrzynkowymi
+Testy czarnoskrzynkowe (black box) bazują na specyfikacji, bez wnikania w kod programu. Dotyczą one “widocznego” zachowania aplikacji, a nie implementacji, do której wglądu nie ma użytkownik końcowy.
+Testy białoskrzynkowe (white box) wymagają analizy struktury aplikacji lub systemu. Dzięki takiemu rodzajowi testów określić stopień, w jakim dany element został przetestowany. Testy te mają na celu jak najlepsze pokrycie różnych ścieżek programu. 
+
+
+Testy funkcjonalne a niefunkcjonalne
+Funkcjonalności to nic innego jak czynności wykonywane przez aplikacje. Testy funkcjonalne analizują zewnętrzne zachowanie oprogramowania, traktując je jako czarną skrzynkę.
+Testy niefunkcjonalne skupiają się na charakterystyce działania aplikacji i obejmują: testy wydajności, użyteczności, niezawodności, bezpieczeństwa oraz testy możliwości pracy na różnych platformach. 
+
+
+Czym są i kto tworzy testy jednostkowe?
+Testy jednostkowe (unit tests) to zbiór testów, które weryfikują, czy jednostka kodu (np. metoda, klasa, serwis) działa zgodnie z oczekiwaniami. Są one zwykle tworzone przez programistów w ramach wytwarzania oprogramowania. Testy te uruchamiane są w izolacji, co oznacza, że nie jesteśmy w żaden sposób związani z innymi elementami systemu. Testy jednostkowe są nieodłącznym elementem wytwarzania oprogramowania w podejściu TDD (Test Driven Development).
+
+
+Czym jest BDD i TDD.
+TDD (Test-Driven Development) jest podejściem do tworzenia oprogramowania, w którym główną ideą jest w pierwszej kolejności pisanie testów do nieistniejącej funkcjonalności, a dopiero potem napisanie kodu implementującego tę funkcjonalność.
+BDD (Behavior-Driven Development) to podejście będące rozwinięciem TDD. Testy pisane z wykorzystaniem składni języka naturalnego (np. zdań w języku angielskim), które wyrażają zachowanie i oczekiwane rezultaty. Kryteria akceptacyjne są pisane w formie scenariuszy i korzystają ze słów kluczowych Given (początkowy warunek), When (opis występującego zdarzenia) oraz Then (oczekiwany rezultat). Dużą zaletą podejścia BDD jest to, że testy zrozumiałe są dla pracowników nietechnicznych. Mogą one również stanowić swego rodzaju dokumentację systemu.
